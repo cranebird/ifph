@@ -24,5 +24,15 @@ ifph
 | 状態モナド |        | St a | StMonad | STT, MkSTT | apply |
 | 出力モナド |        | Out a | ShowMonad |    |   |
 
+| 型クラス | 演算 |
+|--------|----------------|
+| Monad m | return, >>= | 
+| ExMonad m | raise | 
+| StMonad m | tick |
+| ShowMonad m | showMonad |
+| Transformer t | promote |
+
+##
+
 
 
