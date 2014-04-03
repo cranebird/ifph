@@ -15,3 +15,14 @@ ifph
 | 出力 | 実行ステップのトレース(10.2.4) | Out, MkOut (Output, a), Output |
 
 
+## モナドによる評価器 + モナドの複合
+
+| モナド | 説明 | 登場人物 | 型クラス | モナド変換子 | 補助関数 |
+|--------|--------|--------|-----|-----|-----|
+| 恒等モナド |        | Id a  |     |     |     |
+| 例外モナド |        | Exc a | ExMonad | EXC, MkEXC | recover |
+| 状態モナド |        | St a | StMonad | STT, MkSTT | apply |
+| 出力モナド |        | Out a | ShowMonad |    |   |
+
+
+
