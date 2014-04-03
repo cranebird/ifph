@@ -17,16 +17,16 @@ ifph
 
 ## モナドによる評価器 + モナドの複合
 
-| 型クラス | 定義 | 演算 |
-|--------|-----|----|
+| 型クラス | 定義 | 演算 | 対応する標準ライブラリ |
+|--------|-----|----|----|
 | モナド | Monad m | return, >>=  |
-| 恒等モナド | Id a |      |
-| 例外モナド | ExMonad m | raise |
-| 状態モナド | StMonad m | tick  |
-| 出力モナド | ShowMonad m | showMonad |
-| モナド変換子 | Transformer t | promote |
-| 例外モナドのモナド変換子 | EXC | promote, recover |
-| 状態モナドのモナド変換子 | STT | promote, apply |
+| 恒等モナド | Id a |      | Control.Monad.Identity |
+| 例外モナド | ExMonad m | raise | Control.Monad.Error ? |
+| 状態モナド | StMonad m | tick  | Control.Monad.State | 
+| 出力モナド | ShowMonad m | showMonad | Control.Monad.Writer ? |
+| モナド変換子 | Transformer t | promote | |
+| 例外モナドのモナド変換子 | EXC | promote, recover | ErrorT ? |
+| 状態モナドのモナド変換子 | STT | promote, apply | StateT |
 
 ##
 
