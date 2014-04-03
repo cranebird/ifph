@@ -17,20 +17,15 @@ ifph
 
 ## モナドによる評価器 + モナドの複合
 
-| モナド | 説明 | 登場人物 | 型クラス | モナド変換子 | 補助関数 |
-|--------|--------|--------|-----|-----|-----|
-| 恒等モナド |        | Id a  |     |     |     |
-| 例外モナド |        | Exc a | ExMonad | EXC, MkEXC | recover |
-| 状態モナド |        | St a | StMonad | STT, MkSTT | apply |
-| 出力モナド |        | Out a | ShowMonad |    |   |
-
-| 型クラス | 演算 |
-|--------|----------------|
-| Monad m | return, >>= | 
-| ExMonad m | raise | 
-| StMonad m | tick |
-| ShowMonad m | showMonad |
-| Transformer t | promote |
+| 型クラス | 定義 | 演算 |
+| モナド | Monad m | return, >>=  |
+| 恒等モナド | Id a |      |
+| 例外モナド | ExMonad m | raise |
+| 状態モナド | StMonad m | tick  |
+| 出力モナド | ShowMonad m | showMonad |
+| モナド変換子 | Transformer t | promote |
+| 例外モナドのモナド変換子 | EXC | promote, recover |
+| 状態モナドのモナド変換子 | STT | promote, apply |
 
 ##
 
