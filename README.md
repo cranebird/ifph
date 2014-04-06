@@ -21,9 +21,9 @@ ifph
 | モナド | Monad m | return, >>=  |
 | 恒等モナド | Id a |      | Control.Monad.Identity |
 | 例外モナド | ExMonad m | raise | Control.Monad.Error ? |
-| 状態モナド | StMonad m | tick  | Control.Monad.State | 
+| 状態モナド | StMonad m | tick  | Control.Monad.State runState | 
 | 出力モナド | ShowMonad m | showMonad | Control.Monad.Writer ? |
-| モナド変換子 | Transformer t | promote | |
+| モナド変換子 | Transformer t | promote | Control.Monad.Trans.Class lift |
 | 例外モナドのモナド変換子 | EXC | promote, recover | ErrorT ? |
 | 状態モナドのモナド変換子 | STT | promote, apply | StateT |
 
